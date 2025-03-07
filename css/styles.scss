@@ -1,0 +1,304 @@
+$background-color: #191919;
+$text-color: #ffffff;
+$hover-link-color: #118DA8;
+
+$card-substrate: #000000;
+
+body {
+  background-color: $background-color;
+  font-family: "DM Sans", sans-serif;
+  color: $text-color;
+  line-height: 33px;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  &__light {
+    color: $text-color;
+    transition: all .15s ease-in-out;
+
+    &:hover {
+      color: $hover-link-color;
+    }
+  }
+}
+
+// для всех текстовых элементов
+.font {
+  &__title {
+    font-size: 2.5rem;
+
+    @media (min-width: 480px) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: 769px) {
+      font-size: 3.2rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 3.8rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+
+    @media (min-width: 769px) {
+      font-size: 2.8rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 3.8rem;
+    }
+  }
+
+  &__text {
+    color: $text-color;
+    font-size: 1rem;
+    opacity: 70%;
+
+    @media (min-width: 769px) {
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.custom-button {
+  font-size: 1.1rem;
+}
+
+.header__toggler {
+  border-color: $text-color;
+  opacity: 70%;
+}
+
+.header__toggler-svg {
+  background-image: url(../images/menu.svg);
+}
+
+.promo {
+  &__img {
+    width: 100%;
+    border-radius: 30px;
+
+    @media (min-width: 480px) {
+      max-width: none;
+    }
+
+    @media (min-width: 769px) {
+      max-width: 350px;
+    }
+
+    @media (min-width: 900px) {
+      max-width: 400px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 600px;
+    }
+  }
+  
+  &__title {
+    font-size: 2.5rem;
+    max-width: 530px;
+    font-weight: 400;
+    letter-spacing: 3.2px;
+
+    @media (min-width: 769px) {
+      font-size: 3.5rem;
+      min-width: 300px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 4.5rem;
+    }
+  }
+
+  &__social-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+.episodes {
+  &__title {
+    max-width: 700px;
+    line-height: 45px;
+  }
+
+  .custom-card {
+    background-color: $card-substrate;
+    color: $text-color;
+    overflow: hidden;
+    border-radius: 15px;
+
+    @media (min-width: 769px) {
+      border-radius: 30px;
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+
+      @media (min-width: 480px) {
+        aspect-ratio: 2/1;
+      }
+  
+      @media (min-width: 769px) {
+        height: 100%;
+      }
+  
+      @media (min-width: 900px) {
+        max-width: 400px;
+      }
+  
+      @media (min-width: 1200px) {
+        max-width: 600px;
+        aspect-ratio: 1/1.25;
+        max-width: 350px;
+      }
+    }
+
+    &__badge {
+      background-color: $background-color;
+      font-size: 1.1rem;
+    }
+
+    .card-subtitle {
+      color: $hover-link-color;
+    }
+  }
+}
+
+.mentor {
+  &__img {
+    border-radius: 30px;
+
+    @media (min-width: 769px) {
+      max-width: 350px;
+    }
+
+    @media (min-width: 900px) {
+      max-width: 400px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 600px;
+    }
+  }
+
+  &__text {
+    max-width: 600px;
+    min-width: 300px;
+  }
+
+  &__link {
+    color: $hover-link-color;
+    font-size: 1.1rem;
+    transition: all .15s ease-in-out;
+
+    & svg {
+      width: 40px;
+      height: auto;
+
+      & path {
+        fill: $hover-link-color;
+      }
+    }
+
+    &:hover {
+      color: darken($color: $hover-link-color, $amount: 7%);
+
+      & svg path {
+        fill: darken($color: $hover-link-color, $amount: 7%);
+      }
+    }
+  }
+}
+
+.process-carousel {
+  &__item {
+    & img {
+      height: 800px; /* Установите нужную высоту */
+      width: 100%; /* Ширина 100% для адаптивности */
+      object-fit: cover; /* Обрезка изображения, чтобы оно заполнило контейнер */
+      border-radius: 10px;
+    }
+  }
+}
+
+.mailing-list-form {
+  form {
+    width: 100%;
+
+    @media (min-width: 769px) {
+      width: 50%;
+    }
+  }
+
+  &__content {
+    background-color: $card-substrate;
+    border-radius: 30px;
+  }
+
+  &__title {
+    max-width: 550px;
+    font-weight: 400;
+  }
+
+  &__badge {
+    color: $hover-link-color;
+  }
+
+  &__input {
+    height: 60px;
+    background-color: $background-color;
+    border: none;
+    color: $text-color;
+
+    &::placeholder {
+      color: rgba($text-color, 0.7);
+    }
+
+    &:focus {
+      color: $background-color;
+    }
+  }
+}
+
+.reviews {
+  &__item {
+    background-color: $card-substrate;
+    border-radius: 30px;
+  }
+
+  &__text {
+    max-width: 300px;
+    font-size: 2.2rem;
+    color: $text-color;
+  }
+}
+
+.footer {
+  a {
+    font-size: 1.1rem;
+  }
+
+  &__social-link {
+    stroke: $text-color;
+
+    &:hover svg path {
+      transition: all .15s ease-in-out;
+      stroke: $hover-link-color;
+    }
+  }
+}
